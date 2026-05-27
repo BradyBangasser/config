@@ -10,7 +10,7 @@ set -euo pipefail
 REPO="git@github.com:BradyBangasser/config.git"
 DOTFILES_DIR="$HOME/.dotfiles"
 BIN_DIR="$HOME/.local/bin"
-RAW_BASE="https://raw.githubusercontent.com/BradyBangasser/config/main"
+RAW_BASE="https://raw.githubusercontent.com/BradyBangasser/config/refs/heads/main"
 
 # ── helpers ───────────────────────────────────────────────────
 log()  { printf '\e[1;34m==>\e[0m %s\n' "$*"; }
