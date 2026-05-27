@@ -1,0 +1,13 @@
+[Unit]
+Description=Dotfiles auto-sync (push to GitHub)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/dotfile.sh push
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
