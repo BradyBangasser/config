@@ -23,7 +23,10 @@ alias cll="clear && ls -la"
 fortune | cowsay -r | lolcat
 eval "$(starship init bash)"
 export TERM=xterm-256color
-. "$HOME/.cargo/env"
+
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
 
 if [[ -t 0 ]] && [[ -z "$TMUX" ]]; then
   tmux new-session -A -s main
